@@ -26,11 +26,11 @@ function pauseVideo() {
   if (video.paused) {
     video.play();
     video.style.opacity = 1;
-    pauseIcon.src = "assets/playing_video.png";
+    pauseIcon.src = "../assets/playing_video.png";
   } else {
     video.pause();
     video.style.opacity = 0.5;
-    pauseIcon.src = "assets/pause_video.png";
+    pauseIcon.src = "../assets/pause_video.png";
   }
 }
 
@@ -78,9 +78,9 @@ async function updateServerInfo() {
 setInterval(updateServerInfo, 1000);
 
 function getPingIcon(ping) {
-  if (ping <= 100) return "assets/ping_green.png";
-  else if (ping <= 150) return "assets/ping_yellow.png";
-  else return "assets/ping_red.png";
+  if (ping <= 100) return "../assets/ping_green.png";
+  else if (ping <= 150) return "../assets/ping_yellow.png";
+  else return "../assets/ping_red.png";
 }
 
 video.addEventListener("click", pauseVideo);
