@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bedrock Extreme Launcher</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <img
+      id="background"
+      src="assets/background.png"
+      class="background-video"
+    >
+    <div class="container">
+      <div class="header">
+        <div class="title">
+          <img src="assets/icon.png" alt="Título del Launcher" width="400" />
+        </div>
+      </div>
+      <div class="button-container">
+        <button class="button" onclick="openMinecraft()">Start</button>
+        <button class="button-small" onclick="downloadPacks()">
+          Download Packs
+        </button>
+      </div>
+    </div>
+    <div class="button-group">
+      <img
+        src="assets/reloadLauncher.png"
+        alt="Recargar"
+        class="reload-btn"
+        onclick="reloadLauncher()"
+      />
+    </div>
+    <div class="corner-images">
+      <img class="players" src="assets/playersIcon.png" alt="Image 1" />
+      <span id="players">0</span>
+      <img
+        id="ping_icon"
+        class="ping"
+        src="assets/ping_green.png"
+        alt="Image 2"
+      />
+      <span id="ping">0</span>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

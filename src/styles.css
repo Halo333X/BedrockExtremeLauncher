@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "normal";
+  src: url("https://ignitedsstudios.github.io/IgnitedsLauncher/src/fonts/Mont-HeavyDEMO.otf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "mojangles";
+  src: url("./assets/fonts/MinecraftTen.ttf") format("truetype");
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+/* Estilo del fondo de video */
+.background-video {
+  transition: opacity 0.5s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Alinea los elementos al principio del contenedor */
+  height: 100vh; /* Asegura que el contenedor ocupe la altura completa de la ventana */
+  padding: 20px; /* Añade un poco de padding alrededor para evitar que los elementos queden demasiado pegados a los bordes */
+}
+
+/* Estilo del header simulado */
+.header {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  margin-bottom: 40px; /* Espacio entre el header y los botones */
+  text-align: center;
+}
+
+/* Estilo del título con imagen */
+.title {
+  margin-top: 10px; /* Espacio entre el borde superior del header y el título */
+}
+
+/* Contenedor de botones */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto; /* Empuja el contenedor de botones hacia abajo */
+  margin-bottom: 20px;
+}
+
+/* Estilo del botón Start con animación de rebote */
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.8, 1.5);
+  }
+  50% {
+    transform: scale(1.5, 0.8);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.bounce {
+  animation: bounce 0.5s ease forwards;
+}
+
+/* Estilo del botón Start */
+.button {
+  position: relative;
+  z-index: 1;
+  font-family: "mojangles";
+  padding: 20px;
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+  background-color: #c30000;
+  border: none;
+  border-bottom: 5px solid #680000;
+  color: white;
+  border-radius: 0px;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+  margin-bottom: 0px;
+  box-shadow: 0px 0px 0 2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Mantén la clase bounce sólo en la interacción */
+.button:active {
+  animation: bounce 0.5s ease forwards;
+}
+
+/* Estilo del botón Download Packs */
+.button-small {
+  font-family: "normal";
+  padding: 10px 25px;
+  font-size: 12px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.button-group {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.reload-btn, .pause-btn {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.corner-images {
+  font-family: "mojangles";
+  font-size: 14px;
+  color: white;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.corner-images img {
+  width: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
